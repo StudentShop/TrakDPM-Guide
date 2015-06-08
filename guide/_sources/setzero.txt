@@ -1,0 +1,71 @@
+Zero Location
+*************
+
+UCS
++++
+
+The UCS is the same as the `X, Y, Z zero`_ location you set in FeatureCAM.  These must match or your part will be machined in the wrong location on your material.
+
+Set X & Y Axis Zero
++++++++++++++++++++
+
+1.	Load a drill chuck into the spindle, and load an edge finder. Press `DRO`, then `SPIN SPEED`_.
+
+2.	Enter between `600 and 800`_ and press `ABS SET`.
+
+3.	Rotate the spindle `on/off switch`_ clockwise to the #2 position. The spindle will now be rotating clockwise at between 600 and 800 rpm.
+
+4.	Use `JOG` to position the edge finder within 3" to 4" of the top of the part.
+
+.. warning:: Do not use `JOG` once you are within 3" to 4" of the part in any axis!
+
+5.	Use the X & Y axis hand wheels and manual quill feed lever for fine adjustments. You risk crashing into the part or vise if you don't, which could damage the tool and/or spindle.
+
+6.	Press `MODE` and `DRO` to deactivate the `JOG` mode and keep the `DRO` page active.
+
+7.	Lower the edge finder just below the top of the part and manually bring it close to the left or right edge of the part.   Once you are close, switch to the fine increment hand wheel mode by pressing `F` on the `F/C button`_. (F/C stands for Fine and Coarse increment)
+
+8.	Use the edge finder to locate the edge of the part and rotate the on/off switch to the `O` (off) position.  Manually retract the quill until the tool is just above the work piece.  Use the X-axis hand wheel to move the edge finder over the top of the part by 1/2 the diameter of the edge finder.
+
+9.	Press `MODE`, `SETUP`, and `FIX OFFSET` to get to the fixture offset page.  Make sure the cursor is positioned in the `Fixture #2` row and under the `X OFFSET`_ column.  Press `ABS SET` to automatically load the X-axis value shown on the `DRO` page.
+
+10.	Repeat these steps to set the `Y-axis`_.
+
+**Note:** If you want to set the zero in the middle of your stock, do so at this time.  See shop staff if you are not sure how to.
+
+Set Z Axis Zero
++++++++++++++++
+
+.. warning:: Before you can run a program, you must set a Z-axis zero point on the part in the `DRO` mode.  This must be done after all tool lengths, diameters and descriptions have been entered.  Use tool #1 to set the zero.
+
+1.   Press `MODE`, `DRO` and `TOOL #`_.  Enter 1 followed by `ABS SET`.  You should see `TOOL #1` appear in one of the boxes near the top right side of the screen.  Do not continue if you don't see `TOOL #1` appear!
+
+2.   Use `JOG`_ to `move the tool`_ down to within 3" to 4" of the  top of the workpiece.  Press RETURN to stop jogging at this point and use the manual quill feed lever to bring the tip of the tool down until it just barely touches the top of the part.  Instead of touching the stock, use a piece of shim stock between the tool tip and the top of the part as a feeler gage.  Remember to account for the thickness of the shim stock which is .010".
+
+3.   Once you are satisfied that the tip of the tool is indeed on the same plane as the top of the part, `lock the quill`_ in place.
+
+4.   Press the `Z-axis`_ button followed by `ABS SET` while in the `DRO` page to set your Z-axis zero point.
+
+.. _`TOOL #`: _images/tool.jpg
+.. _`JOG`: _images/jog.jpg
+.. _`move the tool`: _images/jog2.jpg
+.. _`lock the quill`: _images/lock.jpg
+.. _`Z-axis`: _images/zset.jpg
+
+Fixture Offsets
++++++++++++++++
+
+Use Fixture Offsets only when you have more than 1 part that needs to be set up at the same time.
+
+Unless you are running multiple fixtures, do not enter anything into the `Z-OFFSET` column at this time.
+
+.. warning:: Do not use.  See shop staff before attempting to set up.
+
+.. _`X, Y, Z zero`: _images/ucs.jpg
+.. _`SPIN SPEED`: _images/spinspeed.jpg
+.. _`600 and 800`: _images/rpm.jpg
+.. _`on/off switch`: _images/onoff.jpg
+.. _`F/C button`: _images/fc.jpg
+.. _`X OFFSET`: _images/xoffset.jpg
+.. _`Y-axis`: _images/yoffset.jpg
+

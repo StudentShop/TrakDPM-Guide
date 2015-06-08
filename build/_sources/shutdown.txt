@@ -1,0 +1,25 @@
+Shut Down
+*********
+
+.. warning:: The computer on the Trak DPM2 is Windows based and therefore must be shut down properly in order to protect it!
+
+1.  Press `SYS`_.
+
+.. _`SYS`: _images/sys.jpg
+
+2.  Press `SHUT DOWN`_.
+
+.. _`SHUT DOWN`: _images/shutdown.jpg
+
+3.  Press `YES` and wait for a message to appear on the screen.  It will say "It is now safe to turn off your computer".
+ 
+.. _`toggle switch`: _images/cntlpnlside.jpg
+
+4.  Flip the `toggle switch`_ located on the right side of the pendant to the "DOWN" position.
+
+.. _`ON/OFF switch`: _images/mainpower.jpg
+
+5.  Rotate the `ON/OFF switch`_ located on the back of the machine to the `OFF` position.
+
+.. caution:: You need to clean  the machine before turning in your tools!  Watch the video to see the proper way to clean the machine.  Click `HERE <http://www.youtube.com/watch?feature=player_detailpage&v=0SmWy_kTHcI>`_ to see the video.
+

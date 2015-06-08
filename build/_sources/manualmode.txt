@@ -1,0 +1,1160 @@
+Conversational Programming
+**************************
+
+JOG
++++
+
+You can move the table and head manually, if desired. Press `DRO`_, and that activates the `handles`_ to move the table.
+
+A flashing message will appear saying "CAUTION: JOG KEYS ARE ACTIVE".
+
+.. _`DRO`: _images/dro.jpg
+.. _`handles`: _images/xyaxis.jpg
+
+To jog, press the X, Y or Z hard keys.  To stop jogging, release the key.
+
+The speed of jog is displayed in the box next to the words "Feed Rate” on the lower left side of the LCD screen.
+
+Press the +/- hard key to reverse direction.  When the number in the Feed rate box is negative, this indicates the minus direction.
+
+Press the FEED RATE keys to reduce and to increase the jog speed in 10 percent increments. The changes in speed may be seen in the Feed Rate box and on the green feed rate indicator. The amount of override is displayed in the Override box.
+
+To jog at a certain rate, simply enter that number as inches or mm per minute and then press the X, Y or Z key. You may also use the override key to adjust this number.
+
+Press RESTORE to return to 150 ipm or 3800mm/min.
+
+To move the Z-axis, you need to jog it to within 3-4" of the top of the part.  Use the quill handle to lower the tool to the desired height.
+
+Power Feed
+++++++++++
+
+The servomotors can be used as a power feed for the table, saddle or quill, or all three
+simultaneously.
+
+Press the POWER FEED soft key.
+
+A message box will appear that shows the power feed dimensions.  All power feed moves are entered as incremental moves from the current position to the next position.
+
+Enter a position by pressing the axis key, the distance to go and the +/- key (if needed). Input the entry by pressing INC SET.  For example, if you wanted to make a power feed move of 2.00" of the table in the negative direction, you would enter: X, 2, +/-, INC SET.
+
+Initiate the power feed move by pressing GO.  You must turn the spindle on.  Use the RPM calculator to determine the correct RPM.
+
+The feedrate is automatically set to 10 ipm (or 254 mm per min).  Press FEED up or FEED down to adjust the feedrate from 1 ipm to 100 ipm. (or 25 to 2540 mmpm)
+
+Press STOP to halt power feed.  Press GO to resume.
+
+Press RETURN soft key to return to DRO.
+
+Do One
+++++++
+
+The Do One routines in the DRO mode allow you to do one CNC operation while machining manually without having to write a program.
+
+The programming and tool path of the events in Do One are nearly identical to those in the Program Mode.
+
+Go To
++++++
+
+The Go To function in the DRO mode allows you to set a dimension in X, Y or Z at which you want the machine to stop moving when you are cranking manually.  For example, if you wanted to machine manually exactly 2" of table motion, you would input: Go To, X, 2, Inc Set.  While the Go To window is displayed, the ProtoTRAK SMX will not let you pass that 2" dimension you set.
+
+Press the Go To key.
+
+Enter the axis, X, Y, Z or any combination. Input the dimension(s).
+
+Press Inc Set or Abs Set.
+
+Crank the handwheel.  Motion will stop at the entered dimension even if you continue to crank the handwheel.
+
+Teach
++++++
+
+Teach gives you the ability to enter X and Y dimensions into a program.  It can be a useful way of entering a few manual moves for operations like clearing out excess material or remembering a few hole locations.
+
+The process of using Teach is in two parts.  The first part takes place in the DRO Mode.  This is where you start the Teach program, establish the program events and enter the X and Y dimensions.  The second part is in the Program Mode.  This is where you complete the Teach events that you began in the DRO Mode by entering the rest of the data.  Once the data is entered, the Teach events become just like the other events that make up a program.
+
+Entering Teach Data
+-------------------
+
+From the DRO screen, press Teach.
+
+On the top of the screen, you will see the message "Teach" and an event counter.  When you enter Teach, you are actually programming events.  If there is already a program in current memory, Teaching will add events to the end of the program.  If there is not already a program in current memory, Teaching will start a new program. For example, if you already had a program in current memory that had 10 events, when you press Teach, the event counter will say EVENT 11.  If there was no program, the event counter will say EVENT 1.  The event counter shows the event for which data is being entered. You may teach in position, drill and mill events only.
+
+Make sure the tool is in the correct position before you press one of the soft keys!
+
+On the first Teach screen, the softkeys are:
+
+POSN
+----
+A position move.  For two-axis programming, the POSN and DRILL events are combined.
+
+DRILL
+-----
+A drill or bore.
+
+MILL BEGIN
+----------
+
+The beginning of a straight line or MILL event.
+
+END TEACH
+---------
+
+Ends the teaching process and returns you to the main DRO screen.
+
+If you press the POSN or DRILL key, the event counter will go up by one and the screen remains the same.  If you press the MILL BEGIN key, the event counter stays on the same number.  That is because you have given the beginning point of the line but not yet the end.  The softkey selections will change to:
+
+MILL END
+--------
+
+The last point of the Mill event.  Press this to end the Mill event and select a POSN, DRILL or new MILL event.
+
+MILL CONT
+---------
+
+The last point of the current Mill event, but the beginning of the next Mill event.  You may enter successive Mill events by pressing the MILL CONT key.
+
+Pressing either of the above softkeys will cause the event counter to increase by one.
+
+At any time you may exit the Teach and return to the DRO screen.  The events you have
+defined with their X and Y dimensions are finished in the Program Mode.
+
+Finishing Teach Events
+----------------------
+
+The Teach events that are started in the DRO Mode must be finished in the Program Mode before running.  Teach events are of these different types:
+
+TEACH POSN - for two-axis operation, the Position and Drill event types are combined.
+
+TEACH DRILL- this may also be made into a bore event.
+
+TEACH MILL - a straight line that specifies the beginning and the end.  When TEACH MILL events are defined using the CONT MILL softkey, the prompts for information that cannot change will be suppressed.
+
+When a Teach event is unfinished, the words NOT OK will appear next to the event type.
+
+Once the prompts are completed, the words NOT OK and Teach will disappear. The event will become a normal MILL, DRILL, or POSN event.
+
+Return to Absolute Zero
++++++++++++++++++++++++
+
+At any time during manual DRO operation you may automatically move the table to your absolute zero location in X and Y by pressing the RETURN ABS 0 soft key.  When you do, the message window will read "Ready to Begin: Press Go when Ready”.  Make sure your tool is clear and press the GO key.  The servos will turn on, move the ram to Z retract then move the table at rapid speed to your X and Y absolute zero position, and then turn off.  You will be at zero and in manual DRO operation.
+
+When you are in 2-axis CNC operation, only the X and Y will move, the ram will not.
+
+Spindle Operation
++++++++++++++++++
+
+Spindle speeds are set and adjusted through the controller.
+
+To set spindle speed press the SPIN SPEED softkey.  The Data Input Line will prompt “Spindle RPM”.  Enter the RPM value (40-600 in low, 300-5000 in high) and press SET.  If the spindle was already on when you began to enter the new speed, it will stay at the current speed until you press the SET key.
+
+You may override the spindle speeds with the OVERRIDE display hard key.  Press the F / S key until the LED on the S (for Spindle) side is lit.  Use the up and down arrow keys to change the spindle speed in 5% increments per button press.
+
+Tool #
+++++++
+
+To change tools, press the TOOL # soft key and enter the tool number when prompted by the Data Input Line.
+
+Program Events
+++++++++++++++
+
+Events are fully defined pieces of geometry.  By programming events, you tell the ProtoTRAK SMX CNC what geometry you want to end up with; it figures the tool path for you from your answers to the prompts and the tool information you give it in the Set-Up Mode.
+
+Press Mode, select the PROGRAM soft key.
+
+The first screen you see is the Program Header Screen.  Use up to a 5 digit number to name your program.
+
+You do have the option to scale your geometry, from .1 to 10 times the programmed dimensions.  Leave this at 1 for no change.
+
+Do not change any of the other settings on this page.
+
+Once you have named it, pres the GO TO BEGIN soft key to begin programming.
+
+POSN
+----
+
+This event type positions the table and quill at a specified position.  The positioning is always at rapid speed (modified by feedrate override) and in the most direct path possible from the previous location.  The most common use of the position event is to move the tool around an obstacle such as a clamp.  For this reason, Z and X - Y motion will not occur simultaneously.  First, the Z (head) will move to the higher of the Z rapid position of the current and next event, then the X (table) and Y (saddle) will move at to the programmed position.
+
+To program a Position event press the POSN soft key.
+
+Prompts for the Position event:
+
+X END is the X dimension to the position.
+
+Y END is the Y dimension to the position.
+
+Z Rapid is the Z dimension to the position.
+
+RPM is the spindle RPM for the event.  INC SET will use the RPM of the previous event.
+
+Tool # is the tool number you assign.  INC SET will use the tool number of the previous event.
+
+DRILL
+-----
+
+This event positions the table to the specified X and Y position, moves the HEAD at rapid to the Z RAPID location, feeds the quill to the Z END location, and rapids back to Z RAPID for drill, and feeds back for bore.
+
+Press the DRILL soft key.
+
+Prompts for the drill event:
+
+Drill=1, Bore=2: selects whether the hole is to be drilled or bored.
+
+X: is the X dimension to the hole.
+
+Y: is the Y dimension to the hole.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the bottom of the hole.
+
+# PECKS: the factory setting is for each peck to be successively smaller, taking the largest cuts at the beginning and the smallest at the end.  When the highlight is on this prompt, you may change this setting by pressing the HELP key.  This will take you to a screen where you may choose to have the same amount of material taken per peck.
+
+RPM: is the spindle RPM for the event.  INC SET will use the RPM of the previous event.
+
+Z Feedrate: is the drilling feedrate.
+
+Tool #: is the tool number you assign.
+
+BOLT HOLE
+---------
+
+This event allows you to program a bolt hole pattern without needing to compute and program the position of each hole.
+
+Prompts for the Bolt Hole event:
+
+Drill=1, Bore=2: selects whether the hole is to be drilled or bored.
+
+You will also have the choice:  Tap = 3.
+
+# Holes: is the number of holes in the bolt hole pattern.
+
+X Center: is the X dimension to the center of the hole pattern.
+
+Y Center: is the Y dimension to the center of the hole pattern.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the bottom of the hole.
+
+Radius: is the radius of the hole pattern from the center to the center of the holes.
+
+Angle: is the angle from the positive X axis (that is, 3 o'clock) to any hole; positive angle is measured counterclockwise from 0.000 to 359.999 degrees, negative angles measured clockwise.
+
+Pitch: is the pitch of the tap that is used if the Tap option is chosen.
+
+# PECKS: the factory setting is for each peck to be successively smaller, taking the largest cuts at the beginning and the smallest at the end.  When the highlight is on this prompt, you may change this setting by pressing the HELP key.  This will take you to a screen where you may choose to have the same amount of material taken per peck.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+Z Feedrate: is the drilling feedrate.
+
+Tool #: is the tool number you assign.
+
+MILL Events
+-----------
+
+This event allows you to mill in a straight line from any one XYZ point to another, including at a diagonal in space.  It may be programmed with a CONRAD if it is connective with the next event (this next event must lie in the same plane as the Mill event).
+
+Prompts for the Mill event:
+
+X Begin: is the X dimension to the beginning of the mill cut.
+
+Y Begin: is the Y dimension to the beginning of the mill cut.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z Begin: is the Z dimension to the beginning of the mill cut.
+
+X End: is the X dimension to the end of the mill cut; incremental is X Begin.
+
+Y End: is the Y dimension to the end of the mill cut; incremental is Y Begin.
+
+Z End: is the Z dimension to the end of the mill cut; incremental is Z Begin.
+
+Conrad: is the dimension of a tangential radius to the next event (that must lie in the
+same plane for part geometry programming).
+
+Tool Offset: is the selection of the tool offset to right (input 1), offset to left (input 2), or tool center--no offset (input 0) relative to the programmed edge and direction of tool cutter movement and as projected in the XY plane.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+Z Feedrate: is the Z feedrate from Z Rapid to Z begin.
+
+XYZ Feedrate: is the milling feedrate from Begin to End in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Tool #: is the tool number you assign.
+
+ARC
+---
+
+This event allows you to mill with circular contouring any arc (fraction of a circle) that lies in the XY plane or a vertical plane (see Section 5.3).  Vertical plane arcs are also limited to those that are entirely concave or convex (in other words, if you think of the arc lying on the surface of the earth, then it can't cross the equator).
+
+In ARC events when X Center, Y Center, and Z Center are programmed incrementally, they are referenced from X End, Y End, and Z End respectively.  An ARC event may be programmed with a CONRAD if it is connective with the next event (this next event must lie in the same plane as the Arc event).
+
+Note:  When an arc is a 180 degree arc, there are several paths that all have the same beginning, ending, and center locations.  To illustrate, imagine that if you were on the earth's equator and you wanted to get to the other side of the earth you could go clockwise or counterclockwise around the equator, or you could go up over the north pole, or down under the south pole. 
+
+The ProtoTRAK SMX CNC will automatically assume that all 180 degree arcs that have the same beginning, ending and center dimensions for Z, lie in the XY plane.
+
+Prompts for the Arc event:
+
+X Begin: is the X dimension to the beginning of the arc cut.
+
+Y Begin: is the Y dimension to the beginning of the arc cut.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z Begin: is the Z dimension to the beginning of the arc cut.
+
+X End: is the X dimension to the end of the arc cut; incremental is from X Begin.
+
+Y End: is the Y dimension to the end of the arc cut; incremental is from Y Begin.
+
+Z End: is the Z dimension to the end of the arc cut; incremental is from Z Begin.
+
+X Center: is the X dimension to the center of the arc; incremental is from X End.
+
+Y Center: is the Y dimension to the center of the arc; incremental is from Y End.
+
+Z Center: is the Z dimension to the center of the arc; incremental is from Z End.
+
+Conrad: is the dimension of a tangential radius to the next event (which must lie in the same plane).
+
+Direction: is the clockwise (input 1), or counterclockwise (input 2) direction of the arc as viewed looking down for an arc in the XY plane, looking from the front for a vertical plane, or looking from the right for a vertical YZ plane.
+
+Tool Offset: is the selection of the tool offset to right (input 1), offset to left (input 2),
+or tool center--no offset (input 0) relative to the programmed edge and direction of tool
+cutter movement and as projected in the XY plane.
+
+RPM: is the spindle RPM for the event.  INC SET will use the RPM of the previous event.
+
+Z Feedrate: is the Z feedrate from Z Rapid to Z Begin.
+
+XYZ Feedrate: is the milling feedrate from Begin to End in in/min from .1 to 150, or
+mm/min from 5 to 3810.
+
+Tool #: is the tool number you assign.
+
+POCKET
+------
+
+This event selection gives you a choice between, circle pocket, rectangular pocket and irregular pocket within the XY plane.
+
+Pockets include machining the circumference, as well as all the material inside the circumference of the programmed shape.  If a finished cut is programmed, it will be made at the completion of the final pass.  The cutter will begin away from the wall to be finished, arc into the finish cut, arc out of the finish cut, and position itself the finish cut dimension away from the part before moving the tool out of the part.
+
+The factory setting for tool stepover while machining a pocket is 70%.  This may be changed.  When you first enter the pocket event, the blue ? will appear next to the help key.  Pressing Help will give you the choice of entering a new tool stepover percentage.  The value you enter here will remain the same until you change it again.
+
+Circular Pocket
+...............
+
+Press the CIRCLE PCKT soft key if you wish to mill a circular pocket.
+
+Prompts for the circle pocket:
+
+X Center: is the X dimension to the center of the circle.
+
+Y Center: is the Y dimension to the center of the circle.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the Z dimension at the bottom of the pocket; incremental is from the previous event.
+
+Radius: is the finish radius of the circle.
+
+Direction: is the clockwise (input 1), or counterclockwise (input 2) direction for milling.
+
+# Passes: number of cycles to machine to the final depth spaced equally from Z Rapid to Z End (hint: keep Z Rapid small).
+
+Entry mode: choose between a zigzag ramp and a plunge. The plunge will machine straight down Z to the appropriate Z depth.  The zigzag ramp will move in a zigzag pattern to depth.
+
+Fin Cut: is the width of the finish cut. If 0 is input, there will be no finish cut.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Z Feedrate: is the Z feedrate from Z rapid to Z end.
+
+XYZ Feedrate: is the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Fin Feedrate: is the milling feedrate for the finish cut.
+
+Tool #: is the tool number you assign.
+
+Rectangular Pocket
+..................
+
+Press RECTANGLE soft key if you wish to mill a rectangular pocket (all corners are 90 degree right angles and the sides are parallel to the X and Y axes).
+
+The prompts for the rectangular pocket:
+
+X1: is the X dimension to any corner.
+
+Y1: is the Y dimension to the same corner as X1.
+
+X3: is the X dimension to the corner diagonal to X1; incremental is from X1.
+
+Y3: is the Y dimension to the same corner as X3; incremental is from Y1.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the Z dimension at the bottom of the pocket; incremental is from the previous event.
+
+Conrad: is the value of the tangential radius in each corner.
+
+Direction: is the clockwise (input 1), or counterclockwise (input 2) direction for milling.
+
+# Passes: is the number of cycles to machine to the final depth spaced equally from Z Rapid to Z End (hint: keep Z Rapid small).
+
+Entry mode: choose between a zigzag ramp and a plunge.  The plunge will machine straight down Z to the appropriate Z depth.  The zigzag ramp will move in a zigzag pattern to depth.
+
+Fin Cut: is the width of the finish cut.  If 0 is input there will be no finish cut.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Z Feedrate: is the Z feedrate from Z rapid to Z end.
+
+XYZ Feedrate: is the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Fin Feedrate: is the milling feedrate for the finish cut.
+
+Tool #: is the tool number you assign.
+
+Irregular Pocket
+................
+
+Press the IRREG PCKT soft key if you wish to mill a pocket other than a rectangle or circle.  The Irregular Pocket event gives you the powerful Auto Geometry Engine to define a shape made up of straight lines (Mills) and arcs.
+
+The first screen in an irregular pocket event will define the beginning point and some of its general parameters.  The last event of the irregular pocket must end at the same point as defined in the first event.
+
+X Begin: is the X dimension of the beginning of the pocket.
+
+Y Begin: is the Y dimension of the beginning of the pocket.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the Z dimension of the depth of the pocket.
+
+# Passes: is the number of cycles to machine to the final depth spaced equally from Z rapid to Z end (hint: keep Z Rapid small).
+
+Entry mode: choose between a zigzag ramp and a plunge.  The plunge will machine straight down Z to the appropriate Z depth.  The zigzag ramp will move in a zigzag pattern to depth.
+
+Z Feedrate: is the Z feedrate from Z rapid to Z end.
+
+XYZ Feedrate: is the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Fin Cut: is the width of the finish cut. If 0 is input there will be no finish cut.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Fin Feedrate: is the finish cut milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Tool #: is the tool number you assign.
+
+When the initial screen is complete, you will define the perimeter of the pocket with a series of A.G.E. Mills and A.G.E. Arcs.
+
+No islands may exist in an irregular pocket.
+
+Conrad in Pocket Events
+.......................
+
+A Conrad may be added to the last event of an Irregular Pocket.  The Conrad will be inserted between the end of the last event and the beginning of the next event.
+
+Bottom Finish Cut
+.................
+
+The standard finish cut is along the walls of the part, but you may have the ProtoTRAK machine a finish cut along the bottom as well.  When the highlight is on the Fin Cut prompt, the blue ? appears next to the Help key.  Pressing help gives you the ability to choose a Finish cut in Z.  You can remove the bottom finish cut by placing the highlight on the Fin Cut prompt and pressing Help again.  When you select Yes to the bottom finish cut, the following prompt will appear:
+
+Z FIN CUT: the finish cut at the bottom.
+
+Face Mill
+---------
+
+Press Face Mill soft key if you wish to face or clean up the top of a workpiece.
+
+The cutter will automatically start off of the part that you define.  The cutter will move along the X axis to remove the material starting from where you defined X1, Y1 and finishing at the corner programmed as X3, Y3.
+
+The prompts for the face mill:
+
+X1: is the X dimension to any corner.
+
+Y1: is the Y dimension to the same corner as X1.
+
+X3: is the X dimension to the corner diagonal to X1; incremental is from X1.
+
+Y3: is the Y dimension to the same corner as X3; incremental is from Y1.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the Z dimension at the bottom of the pocket; incremental is from the previous event.
+
+# Passes: is the number of cycles to machine to the final depth spaced equally from Z Rapid to Z End.
+
+Z Fin Cut: is the depth of the finish cut.  If 0 is input there will be no finish cut.
+
+RPM: is the spindle RPM for the event.  INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Z Feedrate: is the Z feedrate from Z rapid to Z end in in/min from .1 to 700, or
+mm/min from 5 to 17780.
+
+XYZ Feedrate: is the milling feedrate in in/min from .1 to 800, or mm/min from 5 to 20320.
+
+Fin Feedrate: is the milling feedrate for the finish cut.
+
+Tool #: is the tool number you assign.
+
+Note – if you press the HELP key when you are on the X1 prompt, you can adjust the step over distance of the face mill.  The default is 95% of the cutter width.  You can adjust it from 1 to 99%.
+
+Islands
+-------
+
+Within the Pocket event choices, you may also select a circular, rectangular or irregular island.  An island is a shape that is left standing when the surrounding material is removed.  The ProtoTRAK gives you the ability to machine almost any shape as an island within a rectangular pocket.  Both the shape of the island and the dimension of the surrounding pocket are defined within the island event.
+
+The tool path for machining the island event is that the tool will first plunge or ramp into the material next to the island, offset by the programmed finish cut, to the depth of the first pass.  The tool will machine the perimeter of the island, offset by the island finish cut.  Then the tool will machine the material in the pocket in a spiral path, moving away from the island in the programmed clockwise or counterclockwise direction.  It will continue this outward spiral motion until it encounters the programmed rectangular perimeter (or pocket).  It will then follow the perimeter, offset by the pocket finish cut.
+
+It will proceed in this manner through the number of programmed passes.  On the final pass, it will machine the island finish cut, then the pocket finish cut.  If a Z finish cut is programmed, it will do this in the same spiral pattern as the roughing passes between machining the island and pocket finish cuts.  The tool will ramp away from the finish cut by the amount of the finish cut before it raises out of the part.
+
+Circular Island
+...............
+
+Press the Circle Island soft key if you wish to mill a circular island.
+
+Prompts for the Circle Pocket:
+
+X CENTER: is the dimension of the center of the Island.
+
+Y CENTER: is the dimension of the center of the Island.
+
+Z RAPID: is the Z dimension of the transition from rapid to feed.
+
+Z END: is the Z dimension at the bottom of the pocket; incremental is from the previous event.
+
+RADIUS: is the finish radius of the Island.
+
+DIRECTION: is the milling direction, clockwise or counterclockwise.
+
+#PASSES: the number of roughing passes to the depth.
+
+ENTRY MODE: choose between zigzag ramp and plunge.  The plunge will machine straight down Z to the appropriate Z depth.  The zigzag ramp will move in a zigzag pattern to depth.
+
+FIN CUT ISL: Finish cut for the Island. If 0 is input, there will be no finish cut.
+
+X1 POCKET: X dimension for one corner of the rectangular pocket that surrounds the island.
+
+Y1 POCKET: Y dimension for one corner of the rectangular pocket that surrounds the island.
+
+X3 POCKET: X dimension for the opposite corner of the rectangular pocket that surrounds the island.
+
+Y3 POCKET: Y dimension for the opposite corner of the rectangular pocket that surrounds the island.
+
+CONRAD PCKT: the value of the tangential radius in the corners of the rectangular pocket that surrounds the island.
+
+FIN CUT PCKT: finish cut along the perimeter of the pocket.  If 0 is input, there will be no finish cut.
+
+RPM is the spindle RPM for the event.  INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Z FEEDRATE: is the Z feedrate from Z rapid to Z end.
+
+XYZ FEEDRATE: the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+FIN FEEDRATE: the finish milling feedrate for both the island and pocket finish cuts.
+
+TOOL #: is the tool number you assign.
+
+Rectangular Island
+..................
+
+Press the RECT ISLAND softkey if you wish to machine a rectangular island.
+
+Prompts for the RECT ISLAND:
+
+X1 ISLAND: X dimension for one corner of the rectangular island.
+
+Y1 ISLAND: Y dimension for one corner of the rectangular island.
+
+X3 ISLAND: X dimension for the diagonal corner of the island.
+
+Y3 ISLAND: Y dimension for the diagonal corner of the island.
+
+Z RAPID: is the Z dimension of the transition from rapid to feed.
+
+Z END: is the Z dimension at the bottom of the pocket; incremental is from the previous event.
+
+CONRAD ISL: the value of the tangential radius in the corners of the island.
+
+DIRECTION: is the milling direction, clockwise or counterclockwise.
+
+#PASSES: the number of roughing passes to the depth.
+
+ENTRY MODE: choose between zigzag ramp and plunge. The plunge will machine straight down Z to the appropriate Z depth.  The zigzag ramp will move in a zigzag pattern to depth.
+
+FIN CUT ISL: Finish cut for the Island. If 0 is input, there will be no finish cut.
+
+X1 POCKET: X dimension for one corner of the rectangular pocket that surrounds the island.
+
+Y1 POCKET: Y dimension for one corner of the rectangular pocket that surrounds the island.
+
+X3 POCKET: X dimension for the diagonal corner of the rectangular pocket that surrounds the island.
+
+Y3 POCKET: Y dimension for the diagonal corner of the rectangular pocket that surrounds the island.
+
+CONRAD PCKT: the value of the tangential radius in the corners of the rectangular pocket that surrounds the island.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+FIN CUT PCKT: finish cut along the perimeter of the pocket. If 0 is input, there will be no finish cut.
+
+Z FEEDRATE: is the Z feedrate from Z rapid to Z end.
+
+XYZ FEEDRATE: the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+FIN FEEDRATE: the finish milling feedrate for both the island and pocket finish cuts.
+
+TOOL #: is the tool number you assign.
+
+Irregular Island
+................
+
+Press the IRREG ISLAND key if you wish to mill an island other than a rectangle or circle.
+
+The Irregular Island gives you the powerful Auto Geometry Engine to define a shape made up of straight lines and arcs.
+
+The first screen in an Irregular Island event will define the beginning point and some of its general parameters.  The last event of the irregular pocket must end at the same point as defined in the first event.
+
+Prompts for the Irregular Island event:
+
+X BEGIN: X dimension to the beginning of the island.
+
+Y BEGIN: Y dimension to the beginning of the island.
+
+Z RAPID: is the Z dimension of the transition from rapid to feed.
+
+Z END: is the Z dimension at the bottom of the pocket; incremental is from the previous event.
+
+#PASSES: the number of roughing passes to the depth.
+
+ENTRY MODE: choose between zigzag ramp and plunge.  The plunge will machine straight down Z to the appropriate Z depth.  The zigzag ramp will move in a zigzag pattern to depth.
+
+FIN CUT ISL: Finish cut for the Island. If 0 is input, there will be no finish cut.
+
+X1 POCKET: X dimension for one corner of the rectangular pocket that surrounds the island.
+
+Y1 POCKET: Y dimension for one corner of the rectangular pocket that surrounds the island.
+
+X3 POCKET: X dimension for the diagonal corner of the rectangular pocket that surrounds the island.
+
+Y3 POCKET: Y dimension for the diagonal corner of the rectangular pocket that surrounds the island.
+
+CONRAD PCKT: the value of the tangential radius in the corners of the rectangular pocket that surrounds the island.
+
+FIN CUT PCKT: finish cut along the perimeter of the pocket. If 0 is input, there will be no finish cut.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Z FEEDRATE: is the Z feedrate from Z rapid to Z end.
+
+XYZ FEEDRATE: the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+FIN FEEDRATE: the finish milling feedrate for both the island and pocket finish cuts.
+
+TOOL #: is the tool number you assign.
+
+PROFILE
+-------
+
+This event allows you to mill around the outside or inside of a circular or rectangular frame or an irregular profile.  The irregular profile may be closed or open.  All profiles are limited to the XY plane.
+
+When the irregular profile event is started the ProtoTRAK SMX CNC will automatically initiate the powerful Auto Geometry Engine.
+
+Circle profile
+..............
+
+.. Warning :: Keep Z Rapid small, but higher than your clamps!
+
+Press the CIRCLE soft key if you wish to mill a circular frame.
+
+Prompts in the Circle Profile event:
+
+X Center: is the X dimension to the center of the circle.
+
+Y Center: is the Y dimension to the center of the circle.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the Z dimension to the bottom of the frame; incremental is from the previous event.
+
+Radius: is the finish radius of the circle.
+
+Direction: is the clockwise (input 1), or counterclockwise (input 2) direction for milling.
+
+Tool Offset: is the selection of the tool offset to the right (input 1), offset to the left (input 2), or tool center--no offset (input 0) relative to the programmed edge and direction of the cutter movement.
+
+# Passes: is the number of cycles to machine to the final depth spaced equally from Z.
+
+Rapid to Z End (hint: keep Z Rapid small, but higher than your clamps).
+
+Fin Cut: is the width of the finish cut. If 0 is input, there will be no finish cut.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Z Feedrate: is the Z feedrate from Z rapid to Z end.
+
+XYZ Feedrate: is the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Finish Feedrate: is the milling feedrate for the finish cut.
+
+Tool #: is the tool number you assign.
+
+Rectangular Profile
+...................
+
+Press the RECTANGLE soft key if you wish to mill a rectangular frame (all corners are 90 degree right angles).
+
+Prompts for the rectangular profile:
+
+X1: is the X dimension to any corner.
+
+Y1: is the Y dimension to the same corner as X1.
+
+X3: is the X dimension to the corner diagonal to X1; incremental is from X1.
+
+Y3: is the Y dimension to the same corner as X3; incremental is from Y1.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the Z dimension at the bottom of the frame; incremental is from the previous event.
+
+Conrad: is the value of the tangential radius in each corner.
+
+Direction: is the clockwise (input 1), or counterclockwise (input 2) direction for milling.
+
+Tool Offset: is the selection of the tool offset to the right (input 1), offset to the left (input 2), or tool center--no offset (input 0) relative to the programmed edge and direction of the cutter movement.
+
+# Passes: is the number of cycles to machine to the final depth spaced equally from Z.
+
+Rapid to Z End (hint: keep Z Rapid small).
+
+Fin Cut: is the width of the finish cut. If 0 is input, there will be no finish cut.
+
+RPM: is the spindle RPM for the event.  INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Z Feedrate: is the Z feedrate from Z rapid to Z end.
+
+XYZ Feedrate: is the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Fin Feedrate: is the milling feedrate for the finish cut (if programmed).
+
+Tool #: is the tool number you assign.
+
+Irregular Profile
+.................
+
+Press the IRREG PROFILE soft key if you wish to mill a profile other than a rectangle or circle.  The Irregular Profile event gives you the powerful Auto Geometry Engine to define a shape made up of straight lines (Mills) and arcs.
+
+The Irregular Profile is a series of events that are programmed to machine continuously.  The first event of the series will be called an IRR PROFILE and it will define the beginning point of the profile and other information that applies to the entire profile.
+
+X Begin: is the X dimension of the beginning of the profile.
+
+Y Begin: is the Y dimension of the beginning of the profile.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z End: is the Z dimension of the depth of the profile.
+
+Tool Offset: is the selection of the tool offset to right (input 1), offset to left (input 2), or tool center--no offset (input 0) relative to the programmed edge and direction of tool cutter movement.
+
+# Passes: is the number of cycles to machine to the final depth spaced equally from Z rapid to Z end (hint: keep Z Rapid small).
+
+Z Feedrate: is the Z feedrate from Z rapid to Z end.
+
+XYZ Feedrate: is the milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Fin Cut: is the width of the finish cut. If 0 is input there will be no finish cut.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+FIN RPM: is the spindle RPM for the finish cut.
+
+Fin Feedrate: is the finish cut milling feedrate in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Tool #: is the tool number you assign.
+
+When the initial Irregular Profile screen is complete, the rest of the profile is programmed using A.G.E. Mill and A.G.E. Arc events.
+
+Helix Events
+------------
+
+The Helix Event is found after you press the MORE softkey from the Select Event screen.  It allows you to machine in a circular path in the XY plane while you simultaneously move the Z-axis linearly.
+
+Press the HELIX soft key.
+
+X Center: is the X dimension to the center of rotation of the helix.
+
+Y Center: is the Y dimension to the center of rotation of the helix.
+
+Z Rapid: is the Z dimension to transition from rapid to feed.
+
+Z Begin: is the Z dimension to the beginning of the helix.
+
+Z End: is the Z dimension at the end of the helix.
+
+Radius: is the radius from the center of rotation to the helix.
+
+Angle: is the angle from the positive X axis (that is, 3 o'clock) to the starting position of the helix.
+
+# Rev: is the number of revolutions in the helix, for example, 0.75 would be 270 degrees, or 3.25 would be three times around plus 90 degrees.
+
+Direction: is the clockwise (input 1) or counterclockwise (input 2) direction of the helix.
+
+Tool Offset: is the selection of the tool offset to right (input 1), offset to left (input 2), or tool center--no offset (input 0) relative to the programmed edge and direction of the cutter movement.
+
+RPM: is the spindle RPM for the event. INC SET will use the RPM of the previous event.
+
+XYZ Feedrate: is the feedrate from beginning to end in in/min from .1 to 150, or mm/min from 5 to 3810.
+
+Tool #: is the tool you assign.
+
+Subroutine Events
+-----------------
+
+The Subroutine Events are used for manipulating previously programmed geometry within the XY plane.  The Subroutine Event is divided into three options: Repeat, Mirror, and Rotate.  Repeat and Rotate may be connective.  As long as the rules of connectivity are satisfied, the ProtoTRAK SMX CNC will continue milling between preceding and subsequent events.
+
+Press the SUBROUTINE (SUB) soft key to call up the Repeat, Mirror, and Rotate options.
+
+
+REPEAT
+......
+
+Allows you to repeat an event or a group of events up to 99 times with an offset in X and/or Y and/or Z.  This can be useful for drilling a series of evenly spaced holes, duplicating some machined shapes, or even repeating an entire program with an offset for a second fixture.
+
+Repeat events may be "nested".  That is, you can repeat a repeat event, of a repeat event, of some programmed event(s).  One new tool number may be assigned for each Repeat Event.
+
+Press the REPEAT soft key.
+
+Where:
+
+First Event #: is the event number of the first event to be repeated.
+
+Last Event #: is the event number of the last event to be repeated; if only one event is to be repeated, the Last Event # is the same as the First Event #.
+
+X Offset: is the incremental X offset from event to be repeated.
+
+Y Offset: is the incremental Y offset from event to be repeated.
+
+Z Offset: is the incremental Z offset from event to be repeated.
+
+Z Rapid Offset: is the incremental Z rapid offset from event to be repeated.
+
+# Repeats: is the number of times events are to be repeated up to 99.
+
+% RPM: is the percentage of RPM in the programmed events.  SET will load in the assumed % of 100%.
+
+% Feed: the percentage of the feeds programmed in the repeated events. 100% is assumed.
+
+Tool #: is the tool number you assign.
+
+MIRROR
+......
+Is used for parts that have symmetrical patterns or mirror image patterns.  In addition to specifying the events to be repeated, you must also indicate the axis or axes (X or Y or XY are allowed) that the reflection is mirrored across.  In addition, you must specify the offset from absolute zero to the line of reflection.  You may not mirror another mirror event, or mirror a rotate event.
+
+Press the MIRROR soft key.
+
+First Event #: is the event number of the first event to be mirrored.
+
+Last Event #: is the event number of the last event to be mirrored; if only one event is to be mirrored, the last event is the same as the first.
+
+Cutting Order: input 1 to cut from the lowest mirrored event to the highest (forward) and 2 to machine from the highest mirrored event to the lowest (backward).  This way you can keep all the machine motion in a consistent direction as it moves from the original shape to the mirrored shape and keep all cutting either climb or conventional.
+
+Mirror Axis: is the selection of the axis or axes to be mirrored (input X or Y or XY, SET).
+
+X Offset: is the distance from Y absolute 0 to the Y-axis line of reflection.
+
+Y Offset: is the distance from X absolute 0 to the X-axis line of reflection.
+
+ROTATE
+......
+
+Is used for polar rotation of parts that have a rotational symmetry around some point in the XY plane.  In other words, you will rotate the geometry around the Z axis.  In addition to specifying the events to be repeated, you must also indicate the absolute X and Y position of the center of rotation, the angle of rotation (measured counterclockwise as positive; and clockwise as negative), and the number of times the specified events are to be rotated and repeated.  You may not rotate another rotate event, however you can rotate a mirror event.
+
+Press the ROTATE soft key.
+
+First Event #: is the event number of the first event to be rotated.
+
+Last Event #: is the event number of the last event to be rotated; if only one event is to be rotated, the last event is the same as the first X Center: is the X absolute position of the center of rotation.
+
+Y Center: is the Y absolute position of the center of rotation.
+
+Angle: is the angle of rotation of the repeated events (positive is counterclockwise; negative is clockwise).
+
+# Repeats: is the number of times events are to be rotated up to 99.
+
+COPY
+----
+
+Copy Events are programmed exactly like Subroutine Events.  The only difference is that in Copy the events are rewritten into subsequent events.  If, for example, in event 11 you Copy Repeated events 6, 7, 8, 9, 10 with 2 repeats, events 6-10 would be copied with the input offsets into events 11-15, and recopied into 16-20.
+
+Copy Events may be Repeat, Mirror, Rotate or Drill to Tap.
+
+Copy is very useful. With Copy you can:
+
+Edit the events that are being repeated, mirrored or rotated without changing the original events.
+
+Connect so that the quill will not move up to the Z Rapid position, and back down unnecessarily.  However, to be connective, you must be certain that the X, Y, Z begin of the first event, once offset or rotated, coincides with the X, Y, Z end of the last event.
+
+Program an event parallel to X or Y (where the geometry is the easiest to describe), rotate it to the desired position, then delete the original.
+
+Copy Drill to Tap
+.................
+
+Do not use this, as the floating tapping head is not available.
+
+PAUSE
+-----
+
+The purpose of the Pause Event is to allow you to program a stop condition within the program.  The effect of this event is to turn off the spindle, move the head to the Z retract location with the X and Y position corresponding to the end of the previous event and stopping the program run.
+
+Pause events are useful if you want to stop the program to make a measurement, change a fixture, etc.
+
+NOTE:  In general, you should avoid programming a PAUSE event between two connective events.  The Pause event will cause the events to NOT be connective.
+
+To program a Pause Event press the PAUSE soft key.  Because there is no input required, simply press SET to load and the event counter will advance by one and the Select Event screen will reappear.
+
+In run, press the GO key after a pause to continue.
+
+Engrave
+-------
+
+The Engrave Event allows you to machine numbers, letters and special characters as part of a part program.
+
+When programming with the Engrave Event, the ProtoTRAK will construct a box to contain the text you define.  This box is oriented along the X axis like the text in this sentence, and you may program up to 40 characters per event (although you will only be able to see 20 characters on the prompts screen).  To machine text in a direction other than the X axis, simply use multiple Engrave Events and place the lower left corner of the box wherever you would like.  The numbers and letters you program will always have a standard orientation (like the letters on this page) – you cannot program tilted or inverted letters with the Engrave Event.
+
+Prompts for the Engrave Event:
+
+First, define the lower left corner of the box that will contain your text:
+
+X BEGIN: The X coordinate of where you want your text to begin.
+
+Y BEGIN: The Y coordinate of where you want your text to begin.
+
+Z RAPID: The Z dimension where the Z rapid feed slows to Z program feed.
+
+Z END: The Z dimension to the bottom of your text.
+
+HEIGHT:  The height of your text.  Each character varies in width; the set height of the character will change the width in order to keep the overall size of the character proportional.
+
+TEXT:  The text to be milled.  When you get to this prompt, the Alpha keys will automatically pop up to allow you to enter the text.  Once you have finished entering text, you must press End (F8) and then any of the SET keys to successfully enter your text into the event.  The alpha keys will appear automatically if the text field is blank.  If you have already entered text but wish to make a change, you will see a blue question mark appear on the lower left corner of the screen when you scroll to this field, press the Help button and the alpha keys will appear.
+
+RPM: is the spindle RPM for the event.  INC SET will use the RPM of the previous event.
+
+Z FEEDRATE: Is the feedrate from Z rapid to Z end.
+
+XYZ FEEDRATE: The feedrate of XYZ along the path of the text.
+
+Tool #: is the tool number you assign.
+
+Notice the field that is labeled “Text Length”.  This field will display the total length of your programmed text and will update as you enter each character.
+
+Auto Geometry Engine (A.G.E.) Programming
++++++++++++++++++++++++++++++++++++++++++
+
+
+This entire section deals with the Auto Geometry Engine.
+
+When you program an Irregular Pocket or an Irregular Profile the Auto Geometry Engine, or A.G.E. is automatically started.
+
+Unlike other events, the A.G.E. allows you to:
+
+Enter the data you know, and skip the prompts you don’t.
+
+Use different types of data (like angles) that may be available from the print.
+
+Enter guesses for the X and Y ends and centers not available on the print.
+
+With the A.G.E., you can easily overcome limitations in the data the print provides without having to spend time in laborious calculations.
+
+The A.G.E. is started automatically when you enter the Irregular Pocket or Irregular Profile event.  The first set of prompts you encounter will be the header information.
+
+Once the profile header screen is finished, you choose between an A.G.E. Mill and an A.G.E. Arc to define the shape.
+
+Where:
+
+A.G.E. Mill:  A straight line from one X Y point to another.
+
+A.G.E. Arc:  Any part of a circle.
+
+End A.G.E.:  Ends the A.G.E. programming for the Irregular Pocket or Irregular Profile.
+
+Abort A.G.E.:  Aborts all A.G.E. events.  The data for all the events is lost.
+
+A.G.E. Mill Prompts
+-------------------
+
+Press the A.G.E. Mill key.
+
+Prompts in A.G.E. Mill programming:
+
+Tangent: this refers to the tangency of the mill to the previous event.
+
+X END:  is the X dimension to the end of the mill cut; incremental to X Begin.
+
+Y END:  is the Y dimension to the end of the mill cut; incremental to Y Begin.
+
+.. Warning:: Use INC SET for CONRAD, ANGLE END and LENGTH input.
+
+CONRAD:  is the dimension of a tangential radius to the next event.
+
+ANGLE END:  is the angle measured counterclockwise from this mill event to the next.  Do not input if the next event is an arc.
+
+LENGTH:  is the length of the mill from beginning to end.
+
+LINE ANGLE:  is the angle of this mill line (moving from begin to end) measured counterclockwise from the positive X axis (that is 3 o’clock).
+
+GUESS:  This softkey will appear when the prompt is on X or Y dimensioned data.  Press the Guess key before you press INC SET or ABS SET to enter the data as a guess.
+
+A.G.E. Arc Prompts
+------------------
+
+Press the A.G.E. ARC key.
+
+Prompts in A.G.E. Arc programming:
+
+Tangent:  this refers to the tangency of the mill to the previous event.
+
+DIRECTION:  is the clockwise (input 1), or counterclockwise (input 2) direction of the arc.
+
+X END: is the X dimension to the end of the arc cut; incremental is from X Begin.
+
+Y END: is the Y dimension to the end of the arc cut; incremental is from Y Begin.
+
+X CENTER: is the X dimension to the center of the arc; incremental is from X End.
+
+Y CENTER: is the Y dimension to the center of the arc; incremental is from Y End.
+
+CONRAD: is the dimension of a tangential radius to the next event.
+
+RADIUS: is the radius of the arc.
+
+.. Warning:: Use INC SET for CORD LENGTH, and CHORD ANGLE input.
+
+CHORD LENGTH: is the straight line distance from the begin point to the end point.
+
+CHORD ANGLE: is the angle spanned by the arc.
+
+In addition to the normal Softkeys, this additional one will appear in A.G.E. Arc
+programming:
+
+GUESS:  this softkey will appear when the prompt is on X or Y dimensioned data.  Press the Guess key before you press INC SET or ABS SET to enter the data as a guess.
+
+Skipping Over Prompts
+---------------------
+
+In the A.G.E., events don't have to be fully defined before you can go to the next one.  You can skip the data you don’t know by using the DATA FWD softkey.  After you press the DATA FWD key at the last prompt, the event will move to the left side of the screen and the Select Event screen will appear.
+
+When skipping over prompts or editing, always use the DATA FWD or DATA BACK key.
+
+Using INC SET or ABS SET will change the data.
+
+If you want the event back on the right side, use the BACK hard key.
+
+The OK/NOT OK Flag
+------------------
+
+Each A.G.E. event has a flag that tells you if it has been fully defined.  Sometimes data from later events is needed to define previous events.  To the immediate right of the event type, the words OK or NOT OK appear, depending on whether that particular event is defined.
+
+Once the OK flag appears for the event, you do not need to enter more information.
+
+Skip past the rest of the prompts with the DATA FWD softkey.
+
+If you leave the Program Mode and then return, pressing the GO TO END softkey will take you automatically to the first NOT OK event.
+
+Ending A.G.E.
+-------------
+
+Any time all the events are of an Irregular Profile are OK, the A.G.E. may be ended.  If you are programming an Irregular Pocket, there is an additional requirement that must be satisfied before the A.G.E. may be ended: the X and Y end point of the last event must be the same as the X and Y beginning point, so that the pocket is closed.  Otherwise, the ProtoTRAK SMX CNC cannot program the tool path to clear the pocket.  
+
+The Irregular Profile has no such restriction since profiles may be open or closed.
+
+Once the A.G.E. is ended, the Irregular Pocket or Irregular Profile event is complete and you may then choose from all the programming canned cycles from the Select an Event screen.  To reopen the A.G.E. Profile or Pocket, simply use the BACK hard key or the PAGE FWD or PAGE BACK softkeys to position on of the A.G.E. events on the right side of the screen.  You may edit or insert other events.
+
+Guessing Data
++++++++++++++
+
+Whenever you are missing X or Y Ends or Centers, you should generally enter a guess.  Guessed data is treated differently by the ProtoTRAK SMX CNC than regular data.  Often, the information you put into the system will allow it to calculate a mathematically correct line or arc that would satisfy the conditions of the hard data you entered.  This line or arc may yield more than one solution to particular point you are looking for.  That is where the Guess comes in: the A.G.E. uses the guess to choose from the mathematically possible solutions.  In most cases, your guesses do not have to be very precise.  The smaller the lines or arcs, the more precise the guess should be.
+
+Guesses should always be entered as absolute dimensions.  Once entered, the guessed data is green and there is a 'G' next to it.  Guessed data will be labeled this way in all the events that are flagged NOT OK.  Once an event is OK, the guessed data will be replaced by calculated data.  If you wish to edit your guesses, placing it on the right side of the screen will cause your original guessed data to reappear.
+
+LOOK and Guess
+++++++++++++++
+
+Guessed data may be entered by pressing the number keys and then SET.  However, you may find it more convenient to use the LOOK graphics to enter guesses.
+
+When the highlight is on the prompt for which you wish to enter a guess, press the Guess key.  The Data Input Line will say "Enter Guess for X END" (for example).  At this point, press the LOOK key.
+
+When the Data Input Line says "Enter Guess" pressing LOOK gives you the ability
+to use graphics to make your guesses.
+
+The Data Input Line could say "Enter Guess for X BEG".  Pressing LOOK at this point will take you to a special version of the LOOK graphics.  Using the cursor keys, you may move a point around the screen.  When you come to the place where your point is, use the Enter key.
+
+The softkeys for this special version of the LOOK graphics:
+
+UP, DOWN, LEFT, RIGHT: move the cursor around the screen.
+
+ZOOM IN: makes the drawing larger.
+
+ZOOM OUT: makes the drawing smaller.
+
+ENTER END: when the cursor is at the point you want to use as a guess, use this to enter the end point of a line or an arc.
+
+ENTER CENTER: use this to register a guess for the center of an arc.
+
+You can enter a combination of guessed and non-guessed data.  For example, if you were to enter the dimension for X End without guessing, you would still be able to enter the dimension of Y End using guess.
+
+Your guess entries are loaded into the program when you exit the LOOK screen by pressing BACK or by pressing LOOK again.  The ProtoTRAK will use the last ENTER key press and load that into the program.
+
+When you use the graphics to guess dimensions on arcs, you may load in guesses for both the X/Y End and the X/Y Center before leaving the LOOK screen.
+
+When you have not first pressed the Guess key, pressing LOOK gives you the same screen as in regular programming.  Whether you enter the guesses as key presses or by using the graphics, the drawing of the LOOK screen distinguishes between events that are fully defined and those that rely on guessed data.  OK events are represented by solid lines.  NOT OK events are represented by dashed lines.
+
+When the events are calculated based on Guessed data, they are represented by a dotted line.
+
+Calculated Data
+---------------
+
+Prompts that are skipped or for which guesses are entered may be replaced by data calculated by the ProtoTRAK SMX CNC.  Calculated data is shown in red in order to distinguish it from the data that you entered.  You cannot edit calculated data, but you may edit your original input.  By putting the event with the calculated data on the right side of the screen, you may position the cursor to the prompt and re-input the data.
+
+Arcs and Conrads
+++++++++++++++++
+
+If the print is missing a lot of data, it may be desirable to program arcs as separate events where possible.  This gives the system more information to work with.
+
+Tangency
+--------
+
+Tangency can occur between a mill and arc or an arc and arc.  Specifically it means that the two events share one and only one point.  You would answer yes to the TANGENCY prompt if the event you are programming is tangent to the previous event.  The information that events are tangent helps the Auto Geometry Engine calculate other dimensions.
+
+You can often tell by looking at the print if events are tangent: 
+
+Tangent intersections tend to blend smoothly without a sharp corner.
+
+Smooth, probably tangent.
+
+Sharp, not tangent.
+
+For the A.G.E., the tangent mill or arc is assumed to continue in the same direction, and
+not double back on the previous event.
+

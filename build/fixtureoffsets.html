@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Fixture Offsets &mdash; TrakDPM 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TrakDPM 1.0 documentation" href="index.html" />
+    <link rel="next" title="Tool Setting Gage Reference Position" href="toolsetting.html" />
+    <link rel="prev" title="Tool Change Reference Position" href="toolchange.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="toolsetting.html" title="Tool Setting Gage Reference Position"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="toolchange.html" title="Tool Change Reference Position"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TrakDPM 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="fixture-offsets">
+<h1>Fixture Offsets<a class="headerlink" href="#fixture-offsets" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Your fixture offset needs to be the same location as your <a class="reference external" href="_images/ucs.jpg">UCS</a> in your FeatureCAM program!</p>
+</div>
+<p>Load an edge finder into the spindle. Press <cite>DRO</cite>, then <a class="reference external" href="_images/spinspeed.jpg">SPIN SPEED</a>.</p>
+<p>Enter <a class="reference external" href="_images/rpm.jpg">900</a> and press <cite>ABS SET</cite>.</p>
+<p>Rotate the spindle <a class="reference external" href="_images/onoff.jpg">on/off</a> switch clockwise to the #2 position. The spindle will now be rotating clockwise at 900 rpm.</p>
+<p>Use <cite>JOG</cite> to position the edge finder within 3 to 4&#8221; of the top of the part.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not use <cite>JOG</cite> once you are within 3 to 4&#8221; of the part in any axis!</p>
+</div>
+<p>Use the X &amp; Y axis hand wheels and manual quill feed lever for fine adjustments. You risk crashing into the part or vise if you don&#8217;t, which could damage the tool and/or spindle.</p>
+<p>Press <cite>MODE</cite> and <cite>DRO</cite> to deactivate the <cite>JOG</cite> mode and keep the <cite>DRO</cite> page active.</p>
+<p>Lower the edge finder just below the top of the part and manually bring it close to the left or right edge of the part.   Once you are close, switch to the fine increment hand wheel mode by pressing <cite>F</cite> on the <a class="reference external" href="_images/fc.jpg">F/C</a> button. (F/C stands for Fine and Coarse increment)</p>
+<p>Use the edge finder to locate the edge of the part and rotate the on/off switch to the <cite>OFF</cite> position.  Manually retract the quill until the tool is just above the work piece.  Use the X-axis hand wheel to move the edge finder over the top of the part by 1/2 the diameter of the edge finder.</p>
+<p>Press <cite>MODE, `SETUP</cite>, and <cite>FIX OFFSET</cite> to get to the fixture offset page.  Make sure the cursor is positioned in the <cite>Fixture #2</cite> row and under the <a class="reference external" href="_images/xoffset.jpg">X OFFSET</a> column.  Press <cite>ABS SET</cite> to automatically load the X-axis value shown on the <cite>DRO</cite> page.</p>
+<p>Repeat these steps to set the <a class="reference external" href="_images/yoffset.jpg">Y-axis</a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Unless you are running multiple fixtures, do not enter anything into the <cite>Z-OFFSET</cite> column at this time.</p>
+</div>
+<p><em>NOTE</em>: If you want to set the zero in the middle of your stock, do so at this time.  See shop staff if you are not sure how to.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="toolchange.html"
+                        title="previous chapter">Tool Change Reference Position</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="toolsetting.html"
+                        title="next chapter">Tool Setting Gage Reference Position</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/fixtureoffsets.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="toolsetting.html" title="Tool Setting Gage Reference Position"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="toolchange.html" title="Tool Change Reference Position"
+             >previous</a> |</li>
+        <li><a href="index.html">TrakDPM 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, The Board of Regents of the University of Wisconsin System.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

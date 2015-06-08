@@ -1,0 +1,8 @@
+Look
+****
+
+You can use the `LOOK`_ button to see a `graphical`_ representation of your program.  
+
+.. _`LOOK`: _images/look.jpg
+.. _`graphical`: _images/graphics.jpg
+

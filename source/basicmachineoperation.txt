@@ -1,0 +1,83 @@
+Basic Machine Operation
+***********************
+
+JOG
++++
+
+You can move the table and head manually, if desired. Press `DRO`_, and that activates the `handles`_ to move the table.
+
+A flashing message will appear saying "CAUTION: JOG KEYS ARE ACTIVE".
+
+.. _`DRO`: _images/dro.jpg
+.. _`handles`: _images/xyaxis.jpg
+
+To jog, press the X, Y or Z hard keys.  To stop jogging, release the key.
+
+The speed of jog is displayed in the box next to the words "Feed Rate” on the lower left side of the LCD screen.
+
+Press the +/- hard key to reverse direction.  When the number in the Feed rate box is negative, this indicates the minus direction.
+
+Press the FEED RATE keys to reduce and to increase the jog speed in 10 percent increments. The changes in speed may be seen in the Feed Rate box and on the green feed rate indicator. The amount of override is displayed in the Override box.
+
+To jog at a certain rate, simply enter that number as inches or mm per minute and then press the X, Y or Z key. You may also use the override key to adjust this number.
+
+Press RESTORE to return to 150 ipm or 3800mm/min.
+
+To move the Z-axis, you need to jog it to within 3-4" of the top of the part.  Use the quill handle to lower the tool to the desired height.
+
+Power Feed
+++++++++++
+
+The servomotors can be used as a power feed for the table, saddle or quill, or all three
+simultaneously.
+
+Press the POWER FEED soft key.
+
+A message box will appear that shows the power feed dimensions.  All power feed moves are entered as incremental moves from the current position to the next position.
+
+Enter a position by pressing the axis key, the distance to go and the +/- key (if needed). Input the entry by pressing INC SET.  For example, if you wanted to make a power feed move of 2.00" of the table in the negative direction, you would enter: X, 2, +/-, INC SET.
+
+Initiate the power feed move by pressing GO.  You must turn the spindle on.  Use the RPM calculator to determine the correct RPM.
+
+The feedrate is automatically set to 10 ipm (or 254 mm per min).  Press FEED up or FEED down to adjust the feedrate from 1 ipm to 100 ipm. (or 25 to 2540 mmpm)
+
+Press STOP to halt power feed.  Press GO to resume.
+
+Press RETURN soft key to return to DRO.
+
+Do One
+++++++
+
+The Do One routines in the DRO mode allow you to do one CNC operation while machining manually without having to write a program.
+
+The programming and tool path of the events in Do One are nearly identical to those in the Program Mode.
+
+GO TO
++++++
+
+The GO TO function in the DRO mode allows you to set a dimension in X, Y or Z at which you want the machine to stop moving when you are manually moving the machine.  For example, if you wanted to machine manually from your current position to exactly 2" from the X zero, you would input: GO TO, X, 2, ABS SET.  While the GO TO window is displayed, the ProtoTRAK SMX will not let you pass that 2" dimension you set.
+
+Press the GO TO key.
+
+Enter the axis, X, Y, Z or any combination. Input the dimension(s).
+
+Press INC SET or ABS SET.
+
+Crank the handwheel.  Motion will stop at the entered dimension even if you continue to crank the handwheel.
+
+Return to Absolute Zero
++++++++++++++++++++++++
+
+At any time during manual DRO operation you may automatically move the table to your absolute zero location in X and Y by pressing the RETURN ABS 0 soft key.  When you do, the message window will read "Ready to Begin: Press Go when Ready”.  Make sure your tool is clear and press the GO key.  The servos will turn on, move the ram to Z retract then move the table at rapid speed to your X and Y absolute zero position, and then turn off.  You will be at zero and in manual DRO operation.
+
+When you are in 2-axis CNC operation, only the X and Y will move, the ram will not.
+
+Spindle Operation
++++++++++++++++++
+
+Spindle speeds are set and adjusted through the controller.
+
+To set spindle speed press the SPIN SPEED softkey.  The Data Input Line will prompt “Spindle RPM”.  Enter the RPM value (40-600 in low, 300-5000 in high) and press SET.  If the spindle was already on when you began to enter the new speed, it will stay at the current speed until you press the SET key.
+
+You may override the spindle speeds with the OVERRIDE display hard key.  Press the F / S key until the LED on the S (for Spindle) side is lit.  Use the up and down arrow keys to change the spindle speed in 5% increments per button press.
+

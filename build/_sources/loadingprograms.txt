@@ -1,0 +1,34 @@
+Loading Programs
+****************
+
+Place your USB into `one of the ports`_ on the right side of the pendant.
+
+Press `MODE`_, and select `PROG IN/OUT`.
+
+Make sure "List Supported Programs Only?" says `YES`. If not, press `YES`.
+
+Press `OPEN`_.
+
+You will now use `TAB` to find the D: drive and use `DATA FWD` or `DATA BACK` to highlight the `folder`_ your program is in.  Once the `folder`_ is highlighted, press `OPEN FOLDER`.  If you can see your program in the window, you can move ahead to `OPEN FILE`.
+
+Now that you can see your program, use `DATA FWD` or `DATA BACK` to highlight it, and press `OPEN FILE`_ .  If you can't see your program, see shop staff.
+
+Your file will now be loaded into the memory of the controller. Press `PROG`_ and `GO TO BEGIN`_, `GO TO END`, or `GO TO #` and select an event number, to see your program. 
+
+LOOK
+++++
+
+At this time you can also press `LOOK`_ to see the `graphical representation`_ of your cutter paths.  It gives you the ability to see your cutter paths in the XY, YZ, and XZ planes, as well as 3D.
+
+`LOOK`_ only works while you are in the program.  Press `MODE`, `PROGRAM`, `BEGINING`, then `LOOK`_.
+
+.. _`one of the ports`: _images/usb.jpg
+.. _`MODE`: _images/mode2.jpg
+.. _`OPEN`: _images/open2.jpg
+.. _`folder`: _images/folder.jpg
+.. _`OPEN FILE`: _images/openfile.jpg
+.. _`PROG`: _images/prog.jpg
+.. _`GO TO BEGIN`: _images/begin.jpg
+.. _`LOOK`: _images/look.jpg
+.. _`graphical representation`: _images/graphics.jpg
+

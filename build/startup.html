@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Start Up Procedure &mdash; TrakDPM 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="TrakDPM 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Axis Selection" href="axis.html"/>
+        <link rel="prev" title="Overview of the Order of Operations" href="overviewoftheorderofoperations.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> TrakDPM
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#front-control-panel">Front Control Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#reference-tool-and-tool-setter">Reference Tool and Tool Setter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#tool-setter">Tool Setter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#tool-holders">Tool Holders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#fogbuster">Fogbuster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overviewoftheorderofoperations.html">Overview of the Order of Operations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Start Up Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="axis.html">Axis Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basicmachineoperation.html">Basic Machine Operation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basicmachineoperation.html#jog">JOG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basicmachineoperation.html#power-feed">Power Feed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basicmachineoperation.html#do-one">Do One</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basicmachineoperation.html#go-to">GO TO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basicmachineoperation.html#return-to-absolute-zero">Return to Absolute Zero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basicmachineoperation.html#spindle-operation">Spindle Operation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conversationalprogramming.html">Conversational Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conversationalprogramming.html#teach">Teach</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#entering-teach-data">Entering Teach Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#posn">POSN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#drill">DRILL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#mill-begin">MILL BEGIN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#end-teach">END TEACH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#mill-end">MILL END</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#mill-cont">MILL CONT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#finishing-teach-events">Finishing Teach Events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="conversationalprogramming.html#tool">Tool #</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversationalprogramming.html#program-events">Program Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#id1">POSN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#id2">DRILL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#bolt-hole">BOLT HOLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#mill-events">MILL Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#arc">ARC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#pocket">POCKET</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#circular-pocket">Circular Pocket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#rectangular-pocket">Rectangular Pocket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#irregular-pocket">Irregular Pocket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#conrad-in-pocket-events">Conrad in Pocket Events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#bottom-finish-cut">Bottom Finish Cut</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#face-mill">Face Mill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#islands">Islands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#circular-island">Circular Island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#rectangular-island">Rectangular Island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#irregular-island">Irregular Island</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#profile">PROFILE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#circle-profile">Circle profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#rectangular-profile">Rectangular Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#irregular-profile">Irregular Profile</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#helix-events">Helix Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#subroutine-events">Subroutine Events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#repeat">REPEAT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#mirror">MIRROR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#rotate">ROTATE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#copy">COPY</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="conversationalprogramming.html#copy-drill-to-tap">Copy Drill to Tap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#pause">PAUSE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#engrave">Engrave</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="conversationalprogramming.html#auto-geometry-engine-a-g-e-programming">Auto Geometry Engine (A.G.E.) Programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#a-g-e-mill-prompts">A.G.E. Mill Prompts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#a-g-e-arc-prompts">A.G.E. Arc Prompts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#skipping-over-prompts">Skipping Over Prompts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#the-ok-not-ok-flag">The OK/NOT OK Flag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#ending-a-g-e">Ending A.G.E.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="conversationalprogramming.html#guessing-data">Guessing Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversationalprogramming.html#look-and-guess">LOOK and Guess</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#calculated-data">Calculated Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="conversationalprogramming.html#arcs-and-conrads">Arcs and Conrads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="conversationalprogramming.html#tangency">Tangency</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loadingcamprograms.html">Loading CAM Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loadingcamprograms.html#look">LOOK</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolchange.html">Tool Change Reference Position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolsetting.html">Tool Setting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolsetting.html#setting-the-tool-setting-reference-position">Setting the <cite>Tool Setting Reference Position</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolsetting.html#setting-the-tools">Setting the Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setzero.html">Zero Location</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setzero.html#ucs">UCS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setzero.html#set-x-y-axis-zero">Set X &amp; Y Axis Zero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setzero.html#set-z-axis-zero">Set Z Axis Zero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setzero.html#fixture-offsets">Fixture Offsets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="runningprograms.html">Running Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shutdown.html">Shut Down</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">TrakDPM</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Start Up Procedure</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/startup.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="start-up-procedure">
+<h1>Start Up Procedure<a class="headerlink" href="#start-up-procedure" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Rotate the <a class="reference external" href="_images/mainpower.jpg">ON/OFF switch</a> located on the back of the machine to the <cite>ON</cite> position.</li>
+</ol>
+<ol class="arabic simple" start="2">
+<li>Flip the <a class="reference external" href="_images/side.jpg">toggle switch</a> located on the right side of the pendant to the <a class="reference external" href="_images/cntlpnlside.jpg">UP position</a>.</li>
+</ol>
+<ol class="arabic simple" start="3">
+<li>Press the <a class="reference external" href="_images/cksys.jpg">CHECK SYSTEMS</a> button when the screen turns on. Please note that this is not a touch screen.  Use the soft buttons located on the bottom of the pendant.</li>
+</ol>
+<p>The Trak DPM2 is now ready to run!</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="axis.html" class="btn btn-neutral float-right" title="Axis Selection" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overviewoftheorderofoperations.html" class="btn btn-neutral" title="Overview of the Order of Operations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013, The Board of Regents of the University of Wisconsin System.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

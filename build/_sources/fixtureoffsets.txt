@@ -1,0 +1,39 @@
+Fixture Offsets
+***************
+
+.. Warning:: Your fixture offset needs to be the same location as your `UCS`_ in your FeatureCAM program!
+
+Load an edge finder into the spindle. Press `DRO`, then `SPIN SPEED`_.
+
+Enter `900`_ and press `ABS SET`.
+
+Rotate the spindle `on/off`_ switch clockwise to the #2 position. The spindle will now be rotating clockwise at 900 rpm.
+
+Use `JOG` to position the edge finder within 3 to 4" of the top of the part.
+
+.. warning:: Do not use `JOG` once you are within 3 to 4" of the part in any axis!
+
+Use the X & Y axis hand wheels and manual quill feed lever for fine adjustments. You risk crashing into the part or vise if you don't, which could damage the tool and/or spindle.
+
+Press `MODE` and `DRO` to deactivate the `JOG` mode and keep the `DRO` page active.
+
+Lower the edge finder just below the top of the part and manually bring it close to the left or right edge of the part.   Once you are close, switch to the fine increment hand wheel mode by pressing `F` on the `F/C`_ button. (F/C stands for Fine and Coarse increment)
+
+Use the edge finder to locate the edge of the part and rotate the on/off switch to the `OFF` position.  Manually retract the quill until the tool is just above the work piece.  Use the X-axis hand wheel to move the edge finder over the top of the part by 1/2 the diameter of the edge finder.
+
+Press `MODE, `SETUP`, and `FIX OFFSET` to get to the fixture offset page.  Make sure the cursor is positioned in the `Fixture #2` row and under the `X OFFSET`_ column.  Press `ABS SET` to automatically load the X-axis value shown on the `DRO` page.
+
+Repeat these steps to set the `Y-axis`_.
+
+.. warning:: Unless you are running multiple fixtures, do not enter anything into the `Z-OFFSET` column at this time.
+
+*NOTE*: If you want to set the zero in the middle of your stock, do so at this time.  See shop staff if you are not sure how to.
+
+.. _`UCS`: _images/ucs.jpg
+.. _`SPIN SPEED`: _images/spinspeed.jpg
+.. _`900`: _images/rpm.jpg
+.. _`on/off`: _images/onoff.jpg
+.. _`F/C`: _images/fc.jpg
+.. _`X OFFSET`: _images/xoffset.jpg
+.. _`Y-axis`: _images/yoffset.jpg
+

@@ -1,0 +1,15 @@
+Running Programs
+****************
+
+.. warning:: Before running your program, see shop staff to have your program verified.
+
+To run your program, press `MODE`, `RUN`, and select `START EVENT #`_ to start at an event, or `START` to run your program from the begining.
+
+.. _`START EVENT #`: _images/start.jpg
+
+`TRIAL RUN`_ allows you to quickly check out your program with no Z movement before you actually start to make parts.  In trial run, the table will move at rapid speed regardless of what feedrates are programmed (the rapid speed may be overridden with the up/down arrows).  The table will stop at each "stop" location (for example, at each drill location) but immediately continue on without your input.
+
+.. _`TRIAL RUN`: _images/trial.jpg
+
+.. Note:: When you are ready to begin running the program, see the shop staff to learn about the Traking feature on this machine.
+

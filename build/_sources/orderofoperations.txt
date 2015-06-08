@@ -1,0 +1,25 @@
+Overview of the Order of Operations
+***********************************
+
+1.	:doc:`Power Up <startup>`.
+
+2.	Select :doc:`2 or 3 Axis <axis>` machining option.
+
+3.	:doc:`Load Program <loadingprograms>`.
+
+4.	Set :doc:`Tool Retract/Tool Change Reference Position <toolchange>`.
+
+5.	Set :doc:`Fixture Offsets <fixtureoffsets>`.
+
+6.	Set :doc:`Tool Setting Gage Reference Position <toolsetting>`. 
+
+7.	Set :doc:`Tool Offsets <toolsetting>`.
+
+8.	Set :doc:`Z-zero point <setzero>` on part.
+
+9.	Run Graphics :doc:`(Look) <look>`.
+
+10.	Run your :doc:`Program <runningprograms>`.
+
+11.	:doc:`Shut Down <shutdown>`.
+

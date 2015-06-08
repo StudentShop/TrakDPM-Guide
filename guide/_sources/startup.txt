@@ -1,0 +1,18 @@
+Start Up Procedure
+******************
+
+1.  Rotate the `ON/OFF switch`_ located on the back of the machine to the `ON` position.
+
+.. _`ON/OFF switch`: _images/mainpower.jpg
+
+2.  Flip the `toggle switch`_ located on the right side of the pendant to the `UP position`_.
+
+.. _`toggle switch`: _images/side.jpg
+.. _`UP position`: _images/cntlpnlside.jpg
+
+3.  Press the `CHECK SYSTEMS`_ button when the screen turns on. Please note that this is not a touch screen.  Use the soft buttons located on the bottom of the pendant.
+
+.. _`CHECK SYSTEMS`: _images/cksys.jpg
+
+The Trak DPM2 is now ready to run!
+

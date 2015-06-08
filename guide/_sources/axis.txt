@@ -1,0 +1,23 @@
+Axis Selection
+**************
+
+.. warning:: Make sure you are in 3 axis mode when machining a FeatureCAM program. Use the 2 axis mode when conversationally programming at the machine.
+
+To switch between 2 & 3 axis modes, press the `soft key labeled "SYS"`_ located on the far left side of the pendant. It doens't look like a button, just the letters SYS.
+
+
+This will bring up the screen where you will be able to `choose between 2`_ and `3 axis modes`_ of operation on the DPM2.
+
+
+To escape this screen, press `"MODE"`_ and `"DRO"`_. 
+
+
+If you look at the top of the screen while in "DRO", you will be able to see if you are in 2 axis or 3 `axis`_ mode of operation.
+
+.. _`soft key labeled "SYS"`: _images/sys.jpg
+.. _`choose between 2`: _images/axis2.jpg
+.. _`3 axis modes`: _images/axis3.jpg
+.. _`"MODE"`: _images/mode.jpg
+.. _`"DRO"`: _images/dro.jpg
+.. _`axis`: _images/axis.jpg
+

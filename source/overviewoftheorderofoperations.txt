@@ -1,0 +1,19 @@
+Overview of the Order of Operations
+***********************************
+
+1.	:doc:`Start Up <startup>`.
+
+2.	Select :doc:`2 or 3 Axis <axis>` machining option.
+
+3.	 :doc:`Conservational Programming <conversationalprogramming>` or use :doc:`Load CAM Program <loadingcamprograms>`.
+
+4.	Set :doc:`Tool Change Reference Position <toolchange>`.
+
+5.	Set :doc:`Tool Setting Reference Position <toolsetting>`. 
+
+6.	Set :doc:`Zero Location(UCS) <setzero>` on stock.
+
+7.	Run your :doc:`Program <runningprograms>`.
+
+8.	:doc:`Shut Down <shutdown>`.
+
