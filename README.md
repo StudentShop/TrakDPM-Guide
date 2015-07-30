@@ -1,8 +1,8 @@
-# Quick start guide for the TrakDPM-Guide
+# TrakDPM Mill Quick Start Guide
 
 ## What is it?
 
-This guide (created with the [Sphinx Python Documentation Generator](http://sphinx-doc.org/index.html)) gives detailed, step-by-step instructions for running a Trak DPM SX2P. It is designed so that a student who has never run the machine (but has elementary knowledge of a manual mill AND conversational programming) can run the machine by themselves mostly unassisted. The only point at which an instructor needs to intervene is to do a safety/problems check just prior to the student running their part (this crucial step is included in the guide), to explain the Traking feature during the initial phase of running the program, or to answer questions.
+This guide (created with the [Sphinx Python Documentation Generator](http://sphinx-doc.org/index.html)) gives detailed, step-by-step instructions for running a Trak DPM SX2P milling machine. It is designed so that a student who has never run the machine (but has elementary knowledge of a manual mill and conversational programming) can run the machine by themselves mostly unassisted. The only point at which an instructor needs to intervene is to do a safety/problems check just prior to the student running their part (this crucial step is included in the guide), to explain the "Traking" feature during the initial phase of running the program, or to answer questions.
 
 ## Installation
 
