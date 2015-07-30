@@ -1,6 +1,4 @@
-# TrakDPM-Guide
-Quick start guide for the Trak DPM SX2P
-# Quick start guide for the Trak TRL 1540V
+# Quick start guide for the TrakDPM-Guide
 
 ## What is it?
 
